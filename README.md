@@ -8,10 +8,21 @@ REQUIREMENTS:
 
 Terraform installed localy.
 
+VERSIONS:
+
+Terraform v1.5.0 - version of the installed localy OSS;
+provider "registry.terraform.io/hashicorp/null"
+  version     = "3.2.1"
+  constraints = "3.2.1" - this version can be found in the .terraform.lock.hcl after using the command "terraform init".
+
 FILES IN THE REPO
-1. main.tf - this file contains the configuration for the resources  
+1. main.tf - this file contains the configuration for the resources
+2. variables.tf - this file is empty because no variables are neede for the run. But by default it should exist.
+3. outputs.tf -  this file is empty because no outputs are neede for the run. But by default it should exist.
 4. README.md
-5. .gitignore 
+5. .gitignore
+
+   * The variables.tf and outputs.tf files are part of the folder and are not removed it order for this folder to be used as s module in the future. So if someone desides to put some variables and outputs in order to expand the configuration those files are available for this task. 
 
 TESTING
 Commands for testing the null_provider block:
