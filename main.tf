@@ -7,7 +7,15 @@ terraform {
   }
 }
 
-provider "null" {
-  # Configuration options
-}
+provider "null" {}
 
+resource "null_resource" "example" {
+    triggers = {
+      id = uuid()
+    } 
+    count = 3
+
+    provisioner "local-exec" {
+      command = "echo This resource has index ${count.index}"
+    }
+}
