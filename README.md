@@ -2,7 +2,7 @@ NULL_PROVIDER & NULL_RESOURCE
 
 SOURCE -  Terraform Registry. 
 
-This kind of provider has a special task - triggering another proccess without creating any resource ot a process. And not only the providers can be null in terraform and the cloud environment. More information about null_providers can be found in the official documentation, and Terraform Registry. To demonstrate what exactly this provider can do, it used another block with "null_resource" with count meta-argument in the configuration. Mein task ot this configuration is to generate ids in the state file, but no real resources are deployed in any vendor like AWS, Azure ect. 
+This kind of provider has a special task - triggering another proccess without creating any resource or a process. And not only the providers can be null in terraform and the cloud environment. More information about null_providers can be found in the official documentation, and Terraform Registry. To demonstrate what exactly this provider can do, it used another block with "null_resource" with count meta-argument in the configuration. Mein task ot this configuration is to generate ids in the state file, but no real resources are deployed in any vendor like AWS, Azure ect. 
 
 REQUIREMENTS:
 
